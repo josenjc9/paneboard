@@ -1,151 +1,248 @@
 {
   "version": 1,
   "title": "我的儀表板",
-  "updatedAt": "2026-11-11T13:25:12+08:00",
+  "demo": true,
   "blocks": [
     {
       "id": "verdict",
       "type": "verdict",
       "title": "整體判讀",
-      "tone": "ok",
-      "headline": "已連線的項目都正常（3 項未設定或未連線）",
-      "detail": "未設定的項目沒有被檢查，不代表正常。"
+      "tone": "warn",
+      "headline": "示範：大致正常，有 1 項要留意",
+      "detail": "這張卡的文字由你的 provider 決定；示範資料不代表任何真實狀況。"
     },
     {
-      "id": "board-counts",
+      "id": "numbers",
       "type": "stat",
-      "title": "任務看板",
+      "title": "數字",
       "items": [
         {
-          "label": "待辦",
-          "value": 2,
+          "label": "待處理任務",
+          "value": 12,
           "unit": "件",
+          "hint": "示範",
           "detail": [
-            "規劃下週內容主題 @麻糬",
-            "整理參考資料清單 @小黑"
+            "整理本週排程",
+            "查證資料來源",
+            "改版首頁文案"
           ]
         },
         {
-          "label": "進行中",
-          "value": 1,
+          "label": "本週完成",
+          "value": 28,
           "unit": "件",
-          "detail": [
-            "整理本週排程 @麻糬"
-          ]
+          "hint": "示範"
+        },
+        {
+          "label": "服務正常率",
+          "value": 99.2,
+          "unit": "%",
+          "hint": "示範"
         },
         {
           "label": "待驗收",
-          "value": 1,
+          "value": 3,
           "unit": "件",
+          "hint": "示範",
           "detail": [
-            "角色三視圖提示詞 @小黑"
-          ]
-        },
-        {
-          "label": "已完成",
-          "value": 1,
-          "unit": "件",
-          "detail": [
-            "建立 Office 骨架 @麻糬"
-          ]
-        },
-        {
-          "label": "卡住",
-          "value": 1,
-          "unit": "件",
-          "detail": [
-            "等待生圖額度重置 @小黑"
+            "範例 A",
+            "範例 B",
+            "範例 C"
           ]
         }
       ]
     },
     {
-      "id": "board-people",
+      "id": "trend",
+      "type": "trend",
+      "title": "近 7 天：投入 vs 產出",
+      "kind": "line",
+      "unit": "件",
+      "series": [
+        {
+          "name": "接到",
+          "points": [
+            {
+              "x": "6 天前",
+              "y": 6
+            },
+            {
+              "x": "5 天前",
+              "y": 9
+            },
+            {
+              "x": "4 天前",
+              "y": 7
+            },
+            {
+              "x": "3 天前",
+              "y": 12
+            },
+            {
+              "x": "2 天前",
+              "y": 10
+            },
+            {
+              "x": "昨天",
+              "y": 14
+            },
+            {
+              "x": "今天",
+              "y": 11
+            }
+          ]
+        },
+        {
+          "name": "完成",
+          "points": [
+            {
+              "x": "6 天前",
+              "y": 4
+            },
+            {
+              "x": "5 天前",
+              "y": 7
+            },
+            {
+              "x": "4 天前",
+              "y": 8
+            },
+            {
+              "x": "3 天前",
+              "y": 9
+            },
+            {
+              "x": "2 天前",
+              "y": 11
+            },
+            {
+              "x": "昨天",
+              "y": 10
+            },
+            {
+              "x": "今天",
+              "y": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "people",
       "type": "table",
-      "title": "每個人手上的任務",
+      "title": "每個人手上的任務與產出",
       "columns": [
         {
           "key": "who",
           "label": "誰"
         },
         {
-          "key": "c0",
-          "label": "待辦",
-          "align": "right"
-        },
-        {
-          "key": "c1",
+          "key": "doing",
           "label": "進行中",
           "align": "right"
         },
         {
-          "key": "c2",
-          "label": "待驗收",
+          "key": "done",
+          "label": "本週完成",
           "align": "right"
         },
         {
-          "key": "c3",
-          "label": "已完成",
-          "align": "right"
-        },
-        {
-          "key": "c4",
-          "label": "卡住",
-          "align": "right"
+          "key": "note",
+          "label": "備註"
         }
       ],
       "rows": [
         {
-          "who": "小黑",
-          "c0": 1,
-          "c1": 0,
-          "c2": 1,
-          "c3": 0,
-          "c4": 1
+          "who": "麻糬",
+          "doing": 3,
+          "done": 11,
+          "note": "示範"
         },
         {
-          "who": "麻糬",
-          "c0": 1,
-          "c1": 1,
-          "c2": 0,
-          "c3": 1,
-          "c4": 0
-        }
-      ]
-    },
-    {
-      "id": "git-activity",
-      "type": "status",
-      "title": "程式提交",
-      "rows": [
+          "who": "小黑",
+          "doing": 2,
+          "done": 9,
+          "note": "示範"
+        },
         {
-          "label": "本機 git repo",
-          "state": "off",
-          "detail": "找不到 repo（用環境變數 TEAHOUSE_REPOS 指定路徑）"
-        }
-      ]
-    },
-    {
-      "id": "quota",
-      "type": "status",
-      "title": "額度",
-      "rows": [
-        {
-          "label": "額度",
-          "state": "off",
-          "detail": "尚未設定（複製 quota.example.json 成 quota.json）"
+          "who": "新人",
+          "doing": 0,
+          "done": null,
+          "note": "剛加入"
         }
       ]
     },
     {
       "id": "services",
       "type": "status",
-      "title": "服務連線",
+      "title": "服務與排程",
       "rows": [
         {
-          "label": "服務檢查",
-          "state": "off",
-          "detail": "尚未設定（複製 services.example.json 成 services.json）"
+          "label": "官網",
+          "state": "ok",
+          "detail": "回應正常"
+        },
+        {
+          "label": "每日備份",
+          "state": "warn",
+          "detail": "上次執行延遲"
+        },
+        {
+          "label": "通知機器人",
+          "state": "off"
+        },
+        {
+          "label": "範例服務",
+          "state": "bad",
+          "detail": "連線逾時"
+        }
+      ]
+    },
+    {
+      "id": "quota",
+      "type": "quota",
+      "title": "額度",
+      "items": [
+        {
+          "label": "範例服務 A：每 5 小時",
+          "used": 62,
+          "limit": 100,
+          "unit": "%",
+          "resetAt": "今天 18:00"
+        },
+        {
+          "label": "範例服務 A：每週",
+          "used": 150,
+          "limit": 200,
+          "unit": "次",
+          "resetAt": "週日 00:00"
+        },
+        {
+          "label": "範例服務 B：本月",
+          "used": 9,
+          "limit": 10,
+          "unit": "GB",
+          "resetAt": "下月 1 日"
+        }
+      ]
+    },
+    {
+      "id": "alerts",
+      "type": "alerts",
+      "title": "提醒",
+      "items": [
+        {
+          "level": "bad",
+          "text": "範例：某服務連線逾時",
+          "action": "檢查網路或重啟該服務"
+        },
+        {
+          "level": "warn",
+          "text": "範例：有 3 件任務超過兩天沒更新"
+        },
+        {
+          "level": "info",
+          "text": "範例：本週完成數創新高"
         }
       ]
     }
