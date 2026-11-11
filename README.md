@@ -15,6 +15,8 @@
 
 *畫面是內附的示範資料，不代表任何真實狀況。*
 
+**可以自行建置成網頁**：`cd app && npm install && npm run build`，產生的 `dist/` 是純靜態網站，可以放到任何靜態網站主機（放在子路徑時要設定 vite 的 `base`）。
+
 *A glassy, local-first dashboard driven by one JSON contract. Write small provider scripts for your own data; a broken provider becomes a red alert card instead of a broken page.*
 
 ## 當成 Skill 使用
