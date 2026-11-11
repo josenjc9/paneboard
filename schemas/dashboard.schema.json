@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "teahouse-dashboard 資料契約 v1",
+  "title": "paneboard 資料契約 v1",
   "description": "頁面只讀這份檔。規則的執行版是 scripts/check_dashboard.py（含更多提示訊息）；這份是給人與 agent 看的結構說明。",
   "type": "object",
   "required": ["version", "title", "blocks"],

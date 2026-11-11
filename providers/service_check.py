@@ -10,7 +10,7 @@ CONF = os.path.join(HERE, 'services.json')
 def probe(url):
     t = time.time()
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'teahouse-dashboard'})
+        req = urllib.request.Request(url, headers={'User-Agent': 'paneboard'})
         with urllib.request.urlopen(req, timeout=5) as r: code = r.status
     except urllib.error.HTTPError as e: code = e.code
     except Exception as e: return 'bad', f'連不上（{type(e).__name__}）'

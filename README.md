@@ -1,7 +1,7 @@
-# teahouse-dashboard　玻璃質感儀表板
+# paneboard　玻璃質感儀表板
 
 <p>
-  <a href="https://github.com/josenjc9/teahouse-dashboard/stargazers"><img src="https://img.shields.io/github/stars/josenjc9/teahouse-dashboard?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/josenjc9/paneboard/stargazers"><img src="https://img.shields.io/github/stars/josenjc9/paneboard?style=social" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT"></a>
 </p>
 
@@ -20,7 +20,7 @@
 ## 當成 Skill 使用
 
 ```bash
-git clone https://github.com/josenjc9/teahouse-dashboard.git ~/.claude/skills/teahouse-dashboard
+git clone https://github.com/josenjc9/paneboard.git ~/.claude/skills/paneboard
 ```
 
 放好後對 agent 說「幫我做一個儀表板」，它會照 `SKILL.md` 帶你做完。不用 git 的話，用 **Code → Download ZIP**，解壓縮後把資料夾放進 skills 目錄。
