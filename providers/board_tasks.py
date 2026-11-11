@@ -4,7 +4,7 @@ Provider 契約：stdout 印一個區塊（物件）或一串區塊（陣列）�
 只讀本機檔案、不需要任何憑證。"""
 import json, os, re, sys
 
-BOARD = os.environ.get('TEAHOUSE_BOARD') or os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'app', 'public', 'data', 'board.md')
+BOARD = os.environ.get('PANEBOARD_BOARD') or os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'app', 'public', 'data', 'board.md')
 
 def parse(path):
     cols, cur = {}, None
