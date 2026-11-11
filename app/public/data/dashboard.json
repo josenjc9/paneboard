@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "title": "我的儀表板",
+  "updatedAt": "2026-11-11T13:25:12+08:00",
+  "blocks": [
+    {
+      "id": "verdict",
+      "type": "verdict",
+      "title": "整體判讀",
+      "tone": "ok",
+      "headline": "已連線的項目都正常（3 項未設定或未連線）",
+      "detail": "未設定的項目沒有被檢查，不代表正常。"
+    },
+    {
+      "id": "board-counts",
+      "type": "stat",
+      "title": "任務看板",
+      "items": [
+        {
+          "label": "待辦",
+          "value": 2,
+          "unit": "件",
+          "detail": [
+            "規劃下週內容主題 @麻糬",
+            "整理參考資料清單 @小黑"
+          ]
+        },
+        {
+          "label": "進行中",
+          "value": 1,
+          "unit": "件",
+          "detail": [
+            "整理本週排程 @麻糬"
+          ]
+        },
+        {
+          "label": "待驗收",
+          "value": 1,
+          "unit": "件",
+          "detail": [
+            "角色三視圖提示詞 @小黑"
+          ]
+        },
+        {
+          "label": "已完成",
+          "value": 1,
+          "unit": "件",
+          "detail": [
+            "建立 Office 骨架 @麻糬"
+          ]
+        },
+        {
+          "label": "卡住",
+          "value": 1,
+          "unit": "件",
+          "detail": [
+            "等待生圖額度重置 @小黑"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "board-people",
+      "type": "table",
+      "title": "每個人手上的任務",
+      "columns": [
+        {
+          "key": "who",
+          "label": "誰"
+        },
+        {
+          "key": "c0",
+          "label": "待辦",
+          "align": "right"
+        },
+        {
+          "key": "c1",
+          "label": "進行中",
+          "align": "right"
+        },
+        {
+          "key": "c2",
+          "label": "待驗收",
+          "align": "right"
+        },
+        {
+          "key": "c3",
+          "label": "已完成",
+          "align": "right"
+        },
+        {
+          "key": "c4",
+          "label": "卡住",
+          "align": "right"
+        }
+      ],
+      "rows": [
+        {
+          "who": "小黑",
+          "c0": 1,
+          "c1": 0,
+          "c2": 1,
+          "c3": 0,
+          "c4": 1
+        },
+        {
+          "who": "麻糬",
+          "c0": 1,
+          "c1": 1,
+          "c2": 0,
+          "c3": 1,
+          "c4": 0
+        }
+      ]
+    },
+    {
+      "id": "git-activity",
+      "type": "status",
+      "title": "程式提交",
+      "rows": [
+        {
+          "label": "本機 git repo",
+          "state": "off",
+          "detail": "找不到 repo（用環境變數 TEAHOUSE_REPOS 指定路徑）"
+        }
+      ]
+    },
+    {
+      "id": "quota",
+      "type": "status",
+      "title": "額度",
+      "rows": [
+        {
+          "label": "額度",
+          "state": "off",
+          "detail": "尚未設定（複製 quota.example.json 成 quota.json）"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "type": "status",
+      "title": "服務連線",
+      "rows": [
+        {
+          "label": "服務檢查",
+          "state": "off",
+          "detail": "尚未設定（複製 services.example.json 成 services.json）"
+        }
+      ]
+    }
+  ]
+}
